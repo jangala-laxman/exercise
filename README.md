@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Canvas App
+Canvas app is paint app built by using react and basic javascript. Libraries like reat-dropzone, react-easy-crop etc are used to upload images via dropping and cropping the uploaded images. Finally adding paint on the uploaded images and downloading them.
+
+Adding tests scripts and responsive to the website is pending.
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

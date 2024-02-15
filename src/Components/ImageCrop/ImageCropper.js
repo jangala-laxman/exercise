@@ -26,6 +26,7 @@ const ImageCropper = ({ image, setImage, setCropped }) => {
         rotation)
       console.log('croppedImage', croppedImage)
       setCroppedImage(croppedImage);
+      setImage(croppedImage)
 
     } catch (err) {
       console.log(err)

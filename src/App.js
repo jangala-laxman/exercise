@@ -4,7 +4,7 @@ import {BrowserRouter, Routes, Route} from'react-router-dom'
 // import Canvas from './Components/Canvas/Canvas';
 import Home from './Components/Home/Home';
 import ImageHandler from './Components/ImageHandler';
-import Canvas from './Components/Canvas/Canvas';
+// import Canvas from './Components/Canvas/Canvas';
 
 function App() {
   

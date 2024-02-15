@@ -83,3 +83,16 @@ p{
   background-color:  #ffbc03ce;
 }
 
+.closeIcon{
+  width:fit-content;
+  height: fit-content;
+  position: relative;
+  top: -200px;
+  left: 170px;
+}
+.closeIcon:hover{
+  cursor: pointer;
+  opacity:0.6;
+  background-color:aliceblue;
+
+}

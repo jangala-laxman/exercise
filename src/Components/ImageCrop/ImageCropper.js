@@ -3,7 +3,6 @@ import Cropper from 'react-easy-crop';
 import './ImageCropper.css';
 import getCroppedImage from '../getCroppedImage';
 import Slider from '@mui/material/Slider'
-import Canvas from '../Canvas/Canvas';
 
 const defaultCrop = { x: 0, y: 0 };
 
@@ -33,17 +32,18 @@ const ImageCropper = ({ image, setImage, setCropped }) => {
     }
   }, [image, rotation, croppedAreaPixels])
 
-  const onClose = useCallback(() => {
+  const onClose = () => {
     setCroppedImage(null)
-  }, [])
-  const handleCroppedImage = () => {
-    setCropped(true)    
-    setImage(croppedImage)
-    console.log(image)
-    return <Canvas image={image}/>
   }
 
-  
+  const handleCroppedImage = (e) => {
+    e.preventDefault()
+    setImage((prev)=>prev=croppedImage)
+    setCropped(true)
+    console.log(image)
+  }
+
+
 
   return (
     <div className="container">
@@ -91,10 +91,10 @@ const ImageCropper = ({ image, setImage, setCropped }) => {
           onChange={(e, rotation) => setRotation(rotation)} />
       </div>
       <div className="cropped-image-container">
-        {croppedImage && (
-          <img className="cropped-image" src={croppedImage} alt="cropped" width={100} height={100} />
-        )}
-        {croppedImage && <button onClick={onClose}>close</button>}
+        <div>{croppedImage && (
+          <img className="cropped-image" src={croppedImage} alt="cropped" width={200} height={200} />
+        )}</div>
+        <div>{croppedImage && <button onClick={onClose}>close</button>}</div>
       </div>
       <div className='navigate'>
         <a href="/upload"><button className='back'>back</button></a>

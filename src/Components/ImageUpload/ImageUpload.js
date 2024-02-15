@@ -1,5 +1,6 @@
 import React, {useCallback} from 'react';
 import { useDropzone } from 'react-dropzone';
+import CloseIcon from '@mui/icons-material/Close';
 import './ImageUpload.css'
 const ImageUpload = ({image, setImage, setImageUploaded}) => {
   const onDrop = useCallback((acceptedFiles) => {
@@ -9,7 +10,6 @@ const ImageUpload = ({image, setImage, setImageUploaded}) => {
       setImage(reader.result);
     };
     console.log(reader.result)
-
     reader.readAsDataURL(file);
   }, [setImage]);
 
@@ -27,8 +27,9 @@ const ImageUpload = ({image, setImage, setImageUploaded}) => {
       <div>
         {image && (
           <>
-            <img src={image} alt="Uploaded" style={imageStyle} />
-            <span onClick={removeImage}>X</span>
+            <img src={image} alt="Uploaded" style={imageStyle} width={200} height={200} />
+            
+            <div className='closeIcon'><CloseIcon onClick={removeImage}  /></div>
           </>
         )}
       </div>
@@ -46,7 +47,7 @@ const dropzoneStyle = {
   border: '2px dashed #ccc',
   borderRadius: '4px',
   padding: '20px',
-  textAlign: 'center',
+  textAlign:'center',
   cursor: 'pointer',
 };
 

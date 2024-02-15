@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from '@mui/material/Slider'
 import { HexColorPicker } from 'react-colorful'
-const Menu = ({ lineColor, setLineColor, lineWidth, setLineWidth , clearPaint}) => {
+const Menu = ({ lineColor, setLineColor, lineWidth, setLineWidth , clearPaint, download}) => {
     return (
         <div className="Menu">
             <div className="menu-controls">
@@ -21,6 +21,7 @@ const Menu = ({ lineColor, setLineColor, lineWidth, setLineWidth , clearPaint}) 
                 />
             </div>
             <button onClick={clearPaint}>Clear</button>
+            <button className="button-3" onClick={download}>Download your paint</button>
         </div>
     )
 }

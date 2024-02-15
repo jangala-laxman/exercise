@@ -28,9 +28,6 @@ const Canvas = ({ image }) => {
         ctx.strokeStyle = lineColor;
         ctx.lineWidth = lineWidth;
         ctxRef.current = ctx;
-        // attachImage(puppy)
-
-        console.log(image)
     }, [lineColor, lineWidth]);
     
 
@@ -65,6 +62,15 @@ const Canvas = ({ image }) => {
         ctxRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height)
     }
 
+    const download=()=>{
+        const canvas = canvasRef.current;
+        const url = canvas.toDataURL("image/png");
+        const link = document.createElement('a');
+        link.download = 'canvas.png';
+        link.href = url;
+        link.click();
+      }
+
     return (
         <div className="canvas-container">
             <Menu
@@ -73,6 +79,7 @@ const Canvas = ({ image }) => {
                 setLineColor={setLineColor}
                 setLineWidth={setLineWidth}
                 clearPaint={clearPaint}
+                download={download}
             />
             <canvas className='canvass'
                 onMouseDown={startDrawing}

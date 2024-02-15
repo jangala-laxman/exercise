@@ -26,8 +26,7 @@ const ImageCropper = ({ image, setImage, setCropped }) => {
         rotation)
       console.log('croppedImage', croppedImage)
       setCroppedImage(croppedImage);
-      setImage(croppedImage)
-
+     
     } catch (err) {
       console.log(err)
     }
@@ -36,21 +35,16 @@ const ImageCropper = ({ image, setImage, setCropped }) => {
   const onClose = () => {
     setCroppedImage(null)
   }
-
-  const handleCroppedImage = (e) => {
-    e.preventDefault()
-    setImage((prev)=>prev=croppedImage)
+  const handleNext=()=>{
+    setImage(croppedImage)
     setCropped(true)
-    console.log(image)
   }
 
 
 
   return (
     <div className="container">
-      <div>
-        <button onClick={showCroppedImage} className='show'>Show</button>
-      </div>
+     
       {image && (
         <div className="cropper-container">
           <Cropper
@@ -95,11 +89,14 @@ const ImageCropper = ({ image, setImage, setCropped }) => {
         <div>{croppedImage && (
           <img className="cropped-image" src={croppedImage} alt="cropped" width={200} height={200} />
         )}</div>
-        <div>{croppedImage && <button onClick={onClose}>close</button>}</div>
+        <div>{croppedImage && <>
+          <button onClick={onClose}>close</button>
+          <button onClick={handleNext}>next</button>
+        </>}</div>
       </div>
       <div className='navigate'>
         <a href="/upload"><button className='back'>back</button></a>
-        <button className='next' onClick={handleCroppedImage}>next</button>
+        <button onClick={showCroppedImage} className='show'>Show</button>
       </div>
     </div>
   );

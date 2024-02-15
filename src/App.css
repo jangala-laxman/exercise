@@ -1,0 +1,14 @@
+.App {
+  overflow: hidden;
+  margin:0; 
+}
+
+header{
+  width: 100%;
+  background-color: black;
+  height:10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color:white
+}

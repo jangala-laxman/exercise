@@ -1,0 +1,8 @@
+.Home{
+    background:rgb(76, 218, 76);
+}
+
+button:hover{
+    cursor:pointer;
+    background-color: red;
+}

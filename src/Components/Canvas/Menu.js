@@ -21,7 +21,7 @@ const Menu = ({ lineColor, setLineColor, lineWidth, setLineWidth , clearPaint, d
                 />
             </div>
             <button onClick={clearPaint}>Clear</button>
-            <button className="button-3" onClick={download}>Download your paint</button>
+            <button className="button-3" onClick={download}>Download</button>
         </div>
     )
 }

@@ -4,7 +4,7 @@
   justify-content: space-evenly;
 }
 
-.cropping{
+.cropping {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -13,7 +13,7 @@
 
 .cropper-container {
   width: 500px;
-  height: 500px;
+  height: 380px;
   margin-top: 20px;
   position: relative;
   overflow: hidden;
@@ -60,33 +60,28 @@
 
 .controls {
   width: 100%;
-  bottom: 30;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 2px;
 }
 
 .show {
-  /* position:absolute; */
-  width: 60%;
-  bottom: 20;
-  left: 0;
-  right: 0;
-  border-radius: 8px;
   width: 100px;
   height: 40px;
+  background-color: orangered;
+  font-size: large;
+  border-radius: 8px;
   outline: none;
-
+  margin: 15px;
+  border: none;
 }
 
 .cropper {
   margin: auto;
   width: 200px;
   height: 200px;
-
 }
 
 .cropped-image-container {
@@ -96,12 +91,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
-.croppedButtons{
+.croppedButtons {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+button{
+  width:100px;
+  height:30px;
+  background-color: orangered;
+  font-size: large;
+  border-radius: 8px;
+  outline:none;
+  margin:15px;
+  border:none;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: center;
+  }
 }

@@ -1,12 +1,3 @@
-.input-image{
-  width:80%;
-  height: 30vh;
-  background-color:ghostwhite ;
-  margin:30px auto;
-  display: flex;
-  justify-content: center;
-  align-items:center
-}
 
 .upload{
   width:100%;
@@ -23,12 +14,17 @@
   align-items:  center;
 }
 
-.dropzone{
-  width: 50vw;
-  height: 40vh;
-  background-color: azure;
-  border:2px dashed blue;
-}
+.dropzoneStyle{
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  text-align:center;
+  cursor: pointer;
+};
+.imageStyle {
+  max-width: 100%;
+  max-height: 200px;
+};
 
 .thumbContainer{
   margin:10px;
@@ -94,5 +90,15 @@ p{
   cursor: pointer;
   opacity:0.6;
   background-color:aliceblue;
+
+}
+
+.uploadedImage{
+  margin:10px 0px;
+}
+
+
+@media only screen and (max-device-width: 768px){
+  
 
 }

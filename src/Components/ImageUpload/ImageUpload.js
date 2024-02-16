@@ -20,14 +20,14 @@ const ImageUpload = ({image, setImage, setImageUploaded, setgetStarted}) => {
   return (
     <div className='upload'>
       <h2> Upload Files</h2>
-      <div {...getRootProps()} style={dropzoneStyle}>
+      <div {...getRootProps()} className='dropzoneStyle'>
           <input {...getInputProps()} />
           <p>Drag 'n' drop an image here, or click to select image</p>
       </div>
-      <div>
+      <div className='uploadedImage'>
         {image && (
           <>
-            <img src={image} alt="Uploaded" style={imageStyle} width={200} height={200} />
+            <img src={image} alt="Uploaded" className='imageStyle' width={200} height={200} />
             
             <div className='closeIcon'><CloseIcon onClick={removeImage}  /></div>
           </>
@@ -43,17 +43,5 @@ const ImageUpload = ({image, setImage, setImageUploaded, setgetStarted}) => {
   );
 };
 
-const dropzoneStyle = {
-  border: '2px dashed #ccc',
-  borderRadius: '4px',
-  padding: '20px',
-  textAlign:'center',
-  cursor: 'pointer',
-};
-
-const imageStyle = {
-  maxWidth: '100%',
-  maxHeight: '200px',
-};
 
 export default ImageUpload;

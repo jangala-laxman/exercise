@@ -45,9 +45,9 @@ const ImageCropper = ({ image, setImage, setCropped, setImageUploaded }) => {
     setCropped(false)
   }
 
-
   return (
     <div className="container">
+
       <div className='cropping'>
         {image && (
           <div className="cropper-container">
@@ -70,6 +70,7 @@ const ImageCropper = ({ image, setImage, setCropped, setImageUploaded }) => {
           </div>
         )}
         <div className='controls'>
+          <h4>Controls</h4>
           <label>Zoom</label>
           <Slider size="small"
             aria-label="zoom"
@@ -95,6 +96,7 @@ const ImageCropper = ({ image, setImage, setCropped, setImageUploaded }) => {
           <button onClick={showCroppedImage} className='show'>Show</button>
         </div>
       </div>
+
       <div className="cropped-image-container">
         <div>{croppedImage && (
           <img className="cropped-image" src={croppedImage} alt="cropped" width={200} height={200} />

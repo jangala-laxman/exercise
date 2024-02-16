@@ -1,10 +1,12 @@
 import React from "react";
 import './Home.css'
-const Home = ()=>{
+const Home = ({setgetStarted})=>{
+    const handleClick=()=>{
+        setgetStarted(true)
+    }
     return (
         <div className="Home">
-            <a href="/upload"><button style={styled}>Get Started</button></a>
-           
+            <button style={styled} onClick={handleClick}>Get Started</button>
         </div>
     )
 }

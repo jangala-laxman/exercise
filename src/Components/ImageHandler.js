@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageUpload from "./ImageUpload/ImageUpload";
 import ImageCropper from "./ImageCrop/ImageCropper";
 import Canvas from "./Canvas/Canvas";
-const ImageHandler = ({image, setImage}) => {
+const ImageHandler = ({image, setImage, setgetStarted}) => {
     const [imageUploaded, setImageUploaded] = useState(false)
     const [cropped, setCropped] = useState(false)
     if(image==null){
@@ -17,11 +17,11 @@ const ImageHandler = ({image, setImage}) => {
                 (
                     <>
                         {!cropped &&
-                            (<ImageCropper image={image} setImage={setImage} cropped={cropped} setCropped={setCropped} />)
+                            (<ImageCropper image={image} setImage={setImage} cropped={cropped} setCropped={setCropped} setImageUploaded={setImageUploaded} />)
                         } 
                     </>
                 ) : (
-                    <ImageUpload image={image} setImage={setImage} setImageUploaded={setImageUploaded} />
+                    <ImageUpload image={image} setImage={setImage} setImageUploaded={setImageUploaded} setgetStarted={setgetStarted}/>
                 )
             }
 

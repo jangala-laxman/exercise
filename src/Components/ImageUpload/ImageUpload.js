@@ -2,7 +2,7 @@ import React, {useCallback} from 'react';
 import { useDropzone } from 'react-dropzone';
 import CloseIcon from '@mui/icons-material/Close';
 import './ImageUpload.css'
-const ImageUpload = ({image, setImage, setImageUploaded}) => {
+const ImageUpload = ({image, setImage, setImageUploaded, setgetStarted}) => {
   const onDrop = useCallback((acceptedFiles) => {
     const file = acceptedFiles[0];
     const reader = new FileReader();
@@ -35,8 +35,8 @@ const ImageUpload = ({image, setImage, setImageUploaded}) => {
       </div>
 
       <div className='navigate'>
-        <a href="/"><button className='back'>back</button></a>
-        <button className='next'  onClick={()=>setImageUploaded(true)}>next</button>
+        <button className='back' onClick={()=>setgetStarted(false)}>back</button>
+        <button className='next' onClick={()=>setImageUploaded(true)}>next</button>
       </div>
     </div>
     

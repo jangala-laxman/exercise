@@ -1,91 +1,107 @@
 .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  justify-content: space-evenly;
+}
 
+.cropping{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .cropper-container {
   width: 500px;
   height: 500px;
   margin-top: 20px;
-  position:relative;
+  position: relative;
   overflow: hidden;
 
 }
 
-.navigate{
-    width: 100vw;
-    margin: 20px; 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  
-  
-  .next{
-    outline:0;
-    width:100px;
-    height: 40px;
-    border:none;
-    border-radius: 8px;
-    background-color: #4681f4;
-  }
-  .next:hover{
-    cursor: pointer;
-    background-color:  #5783db;
-  }
-  .back{
-    width:100px;
-    height: 40px;
-    outline:0;
-    border-radius: 8px;
-    border:none;
-    background-color:  #ffbd03;
-  }
-  .back:hover{
-    outline:0;
-    cursor: pointer;
-    background-color:  #ffbc03ce;
-  }
-  
-.controls{
-  width:60%;
-  bottom:30;
-  left:0;
-  right:0;
+.navigate {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.next {
+  outline: 0;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4681f4;
+}
+
+.next:hover {
+  cursor: pointer;
+  background-color: #5783db;
+}
+
+.back {
+  width: 100px;
+  height: 40px;
+  outline: 0;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffbd03;
+}
+
+.back:hover {
+  outline: 0;
+  cursor: pointer;
+  background-color: #ffbc03ce;
+}
+
+.controls {
+  width: 100%;
+  bottom: 30;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
 }
 
-.show{
+.show {
   /* position:absolute; */
-  width:60%;
-  bottom:20;
-  left:0;
-  right:0;
+  width: 60%;
+  bottom: 20;
+  left: 0;
+  right: 0;
   border-radius: 8px;
-  width:100px;
-  height:40px;
-  outline:none;
+  width: 100px;
+  height: 40px;
+  outline: none;
 
 }
 
-.cropper{
-  margin:auto;
-  width:200px;
-  height:200px;
+.cropper {
+  margin: auto;
+  width: 200px;
+  height: 200px;
 
 }
 
-.cropped-image-container{
-  width:150px;
-  height:150px;
-  display:flex;
+.cropped-image-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
+}
+
+.croppedButtons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

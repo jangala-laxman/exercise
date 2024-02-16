@@ -3,7 +3,12 @@ Canvas app is paint app built by using react and basic javascript. Libraries lik
 
 Adding tests scripts and responsive to the website is pending.
 
-
+## Steps to Follow 
+1. Click on get started button
+2. Upload your image and click ### next
+3. Crop your image and click on ### show button
+4. After viewing image, click next
+5. Paint your cropped image and download.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

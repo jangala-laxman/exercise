@@ -8,15 +8,15 @@ const Canvas = ({ image }) => {
     const [lineWidth, setLineWidth] = useState(5);
     const [lineColor, setLineColor] = useState("black");
 
-    const img = new Image()
-    img.src = image
     useEffect(() => {
+        const img = new Image()
+        img.src = image
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
         img.onload = () => {
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
         }
-    }, [])
+    }, [image])
 
     // Initialization when the component 
     // mounts for the first time 
@@ -87,7 +87,7 @@ const Canvas = ({ image }) => {
                 onMouseMove={draw}
                 ref={canvasRef}
                 width={`1024px`}
-                height={`600px`}
+                height={`500px`}
             />
         </div>
     );

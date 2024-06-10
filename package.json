@@ -1,6 +1,7 @@
 {
   "name": "assignments",
   "version": "0.1.0",
+  "homepage": "https://jangala-laxman.github.io/exercise/",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
